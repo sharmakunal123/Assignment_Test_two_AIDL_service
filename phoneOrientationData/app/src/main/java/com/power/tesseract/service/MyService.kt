@@ -7,18 +7,11 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.IBinder
-import androidx.lifecycle.MutableLiveData
 import com.power.tesseract.IMyAidlInterface
-import java.lang.StringBuilder
 
 class MyService : Service(), SensorEventListener {
 
     companion object {
-        //        val mSensorData = MutableLiveData<FloatArray>()
-//        val mSensorDataXAxis = MutableLiveData<FloatArray>()
-//        val mSensorDataYAxis = MutableLiveData<FloatArray>()
-//        val mSensorDataZAxis = MutableLiveData<FloatArray>()
-//        val mSensorDataAccuracy = MutableLiveData<FloatArray>()
         var mSensorData: String? = null
         var mSensorDataXAxis: String? = null
         var mSensorDataYAxis: String? = null
@@ -97,19 +90,6 @@ class MyService : Service(), SensorEventListener {
             }
 
         }
-//        if (event != null) {
-//            if (event.sensor.type == Sensor.TYPE_ROTATION_VECTOR) {
-//                val values = event.values
-//                Log.d("Value::X", "" + values[0])
-//                Log.d("Value::Y", "" + values[1])
-//                Log.d("Value::Z", "" + values[2])
-//                // x = values[0]
-//                // y = values[1]
-//                // z = values[2]
-////                event.accuracy
-//                // Send data to service
-//            }
-//        }
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
